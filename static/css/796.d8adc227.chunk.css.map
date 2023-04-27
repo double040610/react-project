@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/796.d8adc227.chunk.css","mappings":"AAAA,MAIE,mBADA,aADA,YADA,UAGA","sources":["pages/Home/index.scss"],"sourcesContent":[".home {\r\n  width: 100%;\r\n  height: 100%;\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n"],"names":[],"sourceRoot":""}
