@@ -33,7 +33,7 @@ function App () {
             {/* 创建路由path和组件对应关系 */}
             {/* Layout需要鉴权处理的 */}
             {/* 这里的Layout不一定不能写死 要根据是否登录进行判断 */}
-            <Route path='/' element={
+            <Route path='/react-project' element={
               <AuthComponent>
                 <Layout />
               </AuthComponent>
@@ -43,7 +43,7 @@ function App () {
               <Route path='publish' element={<Publish />}></Route>
             </Route>
             {/* 这个不需要 */}
-            <Route path='/login' element={<Login />}></Route>
+            <Route path='/react-project/login' element={<Login />}></Route>
           </Routes>
         </Suspense>
       </div>

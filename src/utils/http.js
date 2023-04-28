@@ -5,7 +5,7 @@ import axios from 'axios'
 import { getToken } from './token'
 import { history } from './history'
 const http = axios.create({
-  baseURL: 'http://geek.itheima.net/v1_0',
+  baseURL: 'https://29j1q1ez63.execute-api.ap-southeast-2.amazonaws.com/test',
   timeout: 5000
 })
 // 添加请求拦截器

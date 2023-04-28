@@ -89,7 +89,7 @@ const Publish = () => {
     }
 
     // 跳转列表 提示用户
-    navigate('/article')
+    navigate('/react-project/article')
     message.success(`${id ? '更新成功' : '发布成功'}`)
   }
 
@@ -125,7 +125,7 @@ const Publish = () => {
         title={
           <Breadcrumb separator=">">
             <Breadcrumb.Item>
-              <Link to="/home">首页</Link>
+              <Link to="/react-project">首页</Link>
             </Breadcrumb.Item>
             <Breadcrumb.Item>{id ? '编辑' : '发布'}文章</Breadcrumb.Item>
           </Breadcrumb>
@@ -172,7 +172,7 @@ const Publish = () => {
                 listType="picture-card"
                 className="avatar-uploader"
                 showUploadList
-                action="http://geek.itheima.net/v1_0/upload"
+                action="https://29j1q1ez63.execute-api.ap-southeast-2.amazonaws.com/test/upload"
                 fileList={fileList}
                 onChange={onUploadChange}
                 multiple={imgCount > 1}

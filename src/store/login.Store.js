@@ -9,7 +9,7 @@ class LoginStore {
   }
   getToken = async ({ mobile, code }) => {
     // 调用登录接口
-    const res = await http.post('http://geek.itheima.net/v1_0/authorizations', {
+    const res = await http.post('https://29j1q1ez63.execute-api.ap-southeast-2.amazonaws.com/test/authorizations', {
       mobile, code
     })
     // 存入token

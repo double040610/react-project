@@ -27,7 +27,7 @@ const GeekLayout = () => {
   const onConfirm = () => {
     // 退出登录 删除token 跳回到登录
     loginStore.loginOut()
-    navigate('/login')
+    navigate('/react-project/login')
   }
   return (
     <Layout>
@@ -60,13 +60,13 @@ const GeekLayout = () => {
             style={{ height: '100%', borderRight: 0 }}
           >
             <Menu.Item icon={<HomeOutlined />} key="/">
-              <Link to='/'>数据概览</Link>
+              <Link to='/react-project'>数据概览</Link>
             </Menu.Item>
             <Menu.Item icon={<DiffOutlined />} key="/article">
-              <Link to="/article">内容管理</Link>
+              <Link to="/react-project/article">内容管理</Link>
             </Menu.Item>
             <Menu.Item icon={<EditOutlined />} key="/publish">
-              <Link to='/publish'> 发布文章</Link>
+              <Link to='/react-project/publish'> 发布文章</Link>
             </Menu.Item>
           </Menu>
         </Sider>

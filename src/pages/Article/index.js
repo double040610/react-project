@@ -92,7 +92,7 @@ const Article = () => {
   // 编辑文章
   const navigate = useNavigate()
   const goPublish = (data) => {
-    navigate(`/publish?id=${data.id}`)
+    navigate(`/react-project/publish?id=${data.id}`)
   }
 
   const columns = [
@@ -161,7 +161,7 @@ const Article = () => {
         title={
           <Breadcrumb separator=">">
             <Breadcrumb.Item>
-              <Link to="/home">首页</Link>
+              <Link to="/react-project">首页</Link>
             </Breadcrumb.Item>
             <Breadcrumb.Item>内容管理</Breadcrumb.Item>
           </Breadcrumb>

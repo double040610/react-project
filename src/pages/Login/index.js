@@ -14,7 +14,7 @@ function Login () {
     const { mobile, code } = values
     await loginStore.getToken({ mobile, code })
     // 跳转首页
-    navigate('/', { replace: true })
+    navigate('/react-project', { replace: true })
     // 提示用户
     message.success('登录成功')
   }

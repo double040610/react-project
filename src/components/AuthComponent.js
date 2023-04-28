@@ -12,7 +12,7 @@ function AuthComponent ({ children }) {
   if (isToken) {
     return <>{children}</>
   } else {
-    return <Navigate to="/login" replace />
+    return <Navigate to="/react-project/login" replace />
   }
 }
 
