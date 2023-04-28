@@ -73,8 +73,8 @@ const Article = () => {
 
   const formatStatus = (type) => {
     const TYPES = {
-      1: <Tag color="red">审核失败</Tag>,
-      2: <Tag color="green">审核成功</Tag>
+      1: <Tag color="red">審核失敗！</Tag>,
+      2: <Tag color="green">審核成功！</Tag>
     }
     return TYPES[type]
   }
@@ -105,29 +105,29 @@ const Article = () => {
       }
     },
     {
-      title: '标题',
+      title: '標題',
       dataIndex: 'title',
       width: 220
     },
     {
-      title: '状态',
+      title: '狀態',
       dataIndex: 'status',
       render: data => formatStatus(data)
     },
     {
-      title: '发布时间',
+      title: '發佈時間',
       dataIndex: 'pubdate'
     },
     {
-      title: '阅读数',
+      title: '閱讀數',
       dataIndex: 'read_count'
     },
     {
-      title: '评论数',
+      title: '評論數',
       dataIndex: 'comment_count'
     },
     {
-      title: '点赞数',
+      title: '點讚數',
       dataIndex: 'like_count'
     },
     {
@@ -161,7 +161,7 @@ const Article = () => {
         title={
           <Breadcrumb separator=">">
             <Breadcrumb.Item>
-              <Link to="/react-project">首页</Link>
+              <Link to="/react-project">首頁</Link>
             </Breadcrumb.Item>
             <Breadcrumb.Item>内容管理</Breadcrumb.Item>
           </Breadcrumb>
@@ -171,19 +171,19 @@ const Article = () => {
         <Form
           onFinish={onFinish}
           initialValues={{ status: null }}>
-          <Form.Item label="状态" name="status">
+          <Form.Item label="狀態" name="status">
             <Radio.Group>
               <Radio value={null}>全部</Radio>
               <Radio value={0}>草稿</Radio>
-              <Radio value={1}>待审核</Radio>
-              <Radio value={2}>审核通过</Radio>
-              <Radio value={3}>审核失败</Radio>
+              <Radio value={1}>待審核！</Radio>
+              <Radio value={2}>審核通過！</Radio>
+              <Radio value={3}>審核失敗！</Radio>
             </Radio.Group>
           </Form.Item>
 
-          <Form.Item label="频道" name="channel_id">
+          <Form.Item label="頻道" name="channel_id">
             <Select
-              placeholder="请选择文章频道"
+              placeholder="請選擇文章頻道！"
               style={{ width: 120 }}
             >
               {channelStore.channelList.map(channel => <Option key={channel.id} value={channel.id}>{channel.name}</Option>)}
@@ -197,13 +197,13 @@ const Article = () => {
 
           <Form.Item>
             <Button type="primary" htmlType="submit" style={{ marginLeft: 80 }}>
-              筛选
+              篩選
             </Button>
           </Form.Item>
         </Form>
       </Card>
       {/* 文章列表区域 */}
-      <Card title={`根据筛选条件共查询到 ${articleData.count} 条结果：`}>
+      <Card title={`根據篩選條件共查詢到 ${articleData.count} 條結果！：`}>
         <Table
           rowKey="id"
           columns={columns}

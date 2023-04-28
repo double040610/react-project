@@ -16,7 +16,7 @@ function Login () {
     // 跳转首页
     navigate('/react-project', { replace: true })
     // 提示用户
-    message.success('登录成功')
+    message.success('登錄成功！')
   }
 
   return (
@@ -39,32 +39,32 @@ function Login () {
             rules={[
               {
                 required: true,
-                message: '请输入手机号',
+                message: '請輸入13開頭的隨意11位數字！',
               },
               {
                 pattern: /^1[3-9]\d{9}$/,
-                message: '请输入正确的手机号',
+                message: '請正確輸入13開頭的隨意11位數字！',
                 validateTrigger: 'onBlur'
               }
             ]}
           >
-            <Input size="large" placeholder="请输入手机号" />
+            <Input size="large" placeholder="請輸入13開頭的隨意11位數字！" />
           </Form.Item>
           <Form.Item
             name="code"
             rules={[
               {
                 required: true,
-                message: '请输入密码',
+                message: '請輸入246810！',
               },
               {
                 len: 6,
-                message: '请输入6位密码',
+                message: '請輸入246810！',
                 validateTrigger: 'onBlur'
               }
             ]}
           >
-            <Input size="large" placeholder="请输入验证码" />
+            <Input size="large" placeholder="請輸入246810！" />
           </Form.Item>
           <Form.Item
             name="remember"
@@ -72,13 +72,13 @@ function Login () {
 
           >
             <Checkbox className="login-checkbox-label">
-              我已阅读并同意「用户协议」和「隐私条款」
+            我已閱讀並同意「用戶協議」和「隱私條款」！
             </Checkbox>
           </Form.Item>
 
           <Form.Item>
             <Button type="primary" htmlType="submit" size="large" block>
-              登录
+              登錄！
             </Button>
           </Form.Item>
         </Form>

@@ -13,12 +13,12 @@ const Home = () => {
     <div>
       {/* 渲染Bar组件 */}
       <Bar
-        title='主流框架满意度'
+        title='主流框架滿意度！'
         xData={['angular', 'vue', 'react']}
         yData={[30, 40, 50]}
         style={{ width: '500px', height: '400px' }} />
       <Bar
-        title='主流框架使用度'
+        title='主流框架使用度！'
         xData={['angular', 'vue', 'react']}
         yData={[60, 70, 80]}
         style={{ width: '300px', height: '200px' }} />

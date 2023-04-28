@@ -90,7 +90,7 @@ const Publish = () => {
 
     // 跳转列表 提示用户
     navigate('/react-project/article')
-    message.success(`${id ? '更新成功' : '发布成功'}`)
+    message.success(`${id ? '更新成功' : '發佈成功'}`)
   }
 
   // 编辑功能
@@ -127,7 +127,7 @@ const Publish = () => {
             <Breadcrumb.Item>
               <Link to="/react-project">首页</Link>
             </Breadcrumb.Item>
-            <Breadcrumb.Item>{id ? '编辑' : '发布'}文章</Breadcrumb.Item>
+            <Breadcrumb.Item>{id ? '編輯' : '發佈'}文章</Breadcrumb.Item>
           </Breadcrumb>
         }
       >
@@ -139,18 +139,18 @@ const Publish = () => {
           form={form}
         >
           <Form.Item
-            label="标题"
+            label="標題"
             name="title"
-            rules={[{ required: true, message: '请输入文章标题' }]}
+            rules={[{ required: true, message: '請輸入文章標題！' }]}
           >
-            <Input placeholder="请输入文章标题" style={{ width: 400 }} />
+            <Input placeholder="請輸入文章標題！" style={{ width: 400 }} />
           </Form.Item>
           <Form.Item
-            label="频道"
+            label="頻道"
             name="channel_id"
-            rules={[{ required: true, message: '请选择文章频道' }]}
+            rules={[{ required: true, message: '請選擇文章頻道！' }]}
           >
-            <Select placeholder="请选择文章频道" style={{ width: 400 }}>
+            <Select placeholder="請選擇文章頻道！" style={{ width: 400 }}>
               {channelStore.channelList.map(item => (
                 <Option key={item.id} value={item.id}>{item.name}</Option>
               ))}
@@ -161,9 +161,9 @@ const Publish = () => {
           <Form.Item label="封面">
             <Form.Item name="type">
               <Radio.Group onChange={radioChange}>
-                <Radio value={1}>单图</Radio>
-                <Radio value={3}>三图</Radio>
-                <Radio value={0}>无图</Radio>
+                <Radio value={1}>單圖</Radio>
+                <Radio value={3}>三圖</Radio>
+                <Radio value={0}>無圖</Radio>
               </Radio.Group>
             </Form.Item>
             {imgCount > 0 && (
@@ -190,7 +190,7 @@ const Publish = () => {
           <Form.Item
             label="内容"
             name="content"
-            rules={[{ required: true, message: '请输入文章内容' }]}
+            rules={[{ required: true, message: '請輸入文章内容！' }]}
           >
             <ReactQuill theme="snow" />
           </Form.Item>
@@ -198,7 +198,7 @@ const Publish = () => {
           <Form.Item wrapperCol={{ offset: 4 }}>
             <Space>
               <Button size="large" type="primary" htmlType="submit">
-                {id ? '更新' : '发布'}文章
+                {id ? '更新' : '發佈'}文章！
               </Button>
             </Space>
           </Form.Item>
