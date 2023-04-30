@@ -13,12 +13,10 @@ const Article = lazy(() => import('./pages/Article'))
 const Publish = lazy(() => import('./pages/Publish'))
 
 function App () {
-  // useEffect(() => {
-  //   window.location.replace('/#/react-project');
-  // }, []);
+  
   return (
     // 路由配置
-    <HashRouter  >
+    <HistoryRouter history={history}  >
       <div className="App">
         <Suspense
           fallback={
@@ -50,7 +48,7 @@ function App () {
           </Routes>
         </Suspense>
       </div>
-    </HashRouter>
+    </HistoryRouter>
   )
 }
 
