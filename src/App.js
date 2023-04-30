@@ -1,9 +1,9 @@
-import { unstable_HistoryRouter as HistoryRouter, Routes, Route } from 'react-router-dom'
+import { unstable_HistoryRouter as HistoryRouter, Routes, Route,HashRouter } from 'react-router-dom'
 import { history } from './utils'
 
 import './App.css'
 import { AuthComponent } from '@/components/AuthComponent'
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense,useEffect } from 'react'
 
 // 按需导入组件
 const Login = lazy(() => import('./pages/Login'))
@@ -13,9 +13,12 @@ const Article = lazy(() => import('./pages/Article'))
 const Publish = lazy(() => import('./pages/Publish'))
 
 function App () {
+  useEffect(() => {
+    window.location.replace('/#/react-project');
+  }, []);
   return (
     // 路由配置
-    <HistoryRouter history={history}>
+    <HashRouter  >
       <div className="App">
         <Suspense
           fallback={
@@ -37,7 +40,7 @@ function App () {
               <AuthComponent>
                 <Layout />
               </AuthComponent>
-            }>
+             }>
               <Route index element={<Home />}></Route>
               <Route path='article' element={<Article />}></Route>
               <Route path='publish' element={<Publish />}></Route>
@@ -47,7 +50,7 @@ function App () {
           </Routes>
         </Suspense>
       </div>
-    </HistoryRouter>
+    </HashRouter>
   )
 }
 

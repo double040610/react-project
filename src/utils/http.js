@@ -31,7 +31,7 @@ http.interceptors.response.use((response) => {
   if (error.response.status === 401) {
     // 跳回到登录 reactRouter默认状态下 并不支持在组件之外完成路由跳转
     // 需要自己来实现
-    history.push('/login')
+    history.push('/react-project/login')
   }
   return Promise.reject(error)
 })
